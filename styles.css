@@ -1,0 +1,50 @@
+:root{--bg:#F3F0E8;--ink:#13140F;--muted:#5E6055;--card:#FBFAF5;--line:rgba(19,20,15,.14);--dark:#13140F;--onDark:#F3F0E8;--onDarkMuted:#A9AB9F;--stA:#E9E5DA;--stB:#E2DDD0;--lime:#C8F03C}
+[data-theme="dark"]{--bg:#13140F;--ink:#F3F0E8;--muted:#A9AB9F;--card:#1C1D17;--line:rgba(243,240,232,.14);--dark:#0A0B07;--stA:#1E1F19;--stB:#24251E}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{margin:0;background:var(--bg);color:var(--ink);font-family:'Bricolage Grotesque',system-ui,sans-serif;-webkit-font-smoothing:antialiased;transition:background .3s,color .3s}
+a{color:inherit;text-decoration:none}
+a:hover{color:inherit}
+summary{list-style:none;cursor:pointer}
+summary::-webkit-details-marker{display:none}
+details[open] summary span:last-child{transform:rotate(45deg)}
+img{display:block}
+@keyframes ea-blink{50%{opacity:0}}
+@keyframes ea-marquee{from{transform:translateX(0)}to{transform:translateX(-50%)}}
+@media (prefers-reduced-motion:reduce){[data-marquee]{animation:none!important}}
+
+/* hover */
+.h1{transition:all .2s ease}.h1:hover{color:var(--ink) !important}
+.h2{transition:all .2s ease}.h2:hover{color:var(--ink) !important}
+.h3{transition:all .2s ease}.h3:hover{color:var(--ink) !important}
+.h4{transition:all .2s ease}.h4:hover{background:#C8F03C !important;color:#13140F !important}
+.h5{transition:all .2s ease}.h5:hover{transform:translateY(-2px) !important}
+.h6{transition:all .2s ease}.h6:hover{background:var(--ink) !important;color:var(--bg) !important}
+.h7{transition:all .2s ease}.h7:hover{transform:translateY(-3px) !important;box-shadow:0 14px 30px -14px rgba(19,20,15,.35) !important}
+.h8{transition:all .2s ease}.h8:hover{transform:translateY(-3px) !important;box-shadow:0 14px 30px -14px rgba(19,20,15,.35) !important}
+.h9{transition:all .2s ease}.h9:hover{transform:translateY(-3px) !important;box-shadow:0 14px 30px -14px rgba(19,20,15,.35) !important}
+.h10{transition:all .2s ease}.h10:hover{transform:translateY(-3px) !important;box-shadow:0 14px 30px -14px rgba(19,20,15,.35) !important}
+.h11{transition:all .2s ease}.h11:hover{transform:translateY(-3px) !important;box-shadow:0 14px 30px -14px rgba(19,20,15,.35) !important}
+.h12{transition:all .2s ease}.h12:hover{transform:translateY(-3px) !important;box-shadow:0 14px 30px -14px rgba(19,20,15,.35) !important}
+.h13{transition:all .2s ease}.h13:hover{transform:translateY(-3px) !important;box-shadow:0 14px 30px -14px rgba(19,20,15,.35) !important}
+.h14{transition:all .2s ease}.h14:hover{transform:translateY(-3px) !important;box-shadow:0 14px 30px -14px rgba(19,20,15,.35) !important}
+.h15{transition:all .2s ease}.h15:hover{transform:translateY(-3px) !important;box-shadow:0 14px 30px -14px rgba(19,20,15,.35) !important}
+.h16{transition:all .2s ease}.h16:hover{transform:translateY(-3px) !important;box-shadow:0 14px 30px -14px rgba(19,20,15,.35) !important}
+.h17{transition:all .2s ease}.h17:hover{transform:translateY(-3px) !important;box-shadow:0 14px 30px -14px rgba(19,20,15,.35) !important}
+.h18{transition:all .2s ease}.h18:hover{transform:translateY(-3px) !important;box-shadow:0 14px 30px -14px rgba(19,20,15,.35) !important}
+.h19{transition:all .2s ease}.h19:hover{transform:translateY(-3px) !important;box-shadow:0 14px 30px -14px rgba(19,20,15,.35) !important}
+.h20{transition:all .2s ease}.h20:hover{transform:translateY(-3px) !important;box-shadow:0 14px 30px -14px rgba(19,20,15,.35) !important}
+.h21{transition:all .2s ease}.h21:hover{transform:translateY(-3px) !important;box-shadow:0 14px 30px -14px rgba(19,20,15,.35) !important}
+.h22{transition:all .2s ease}.h22:hover{background:var(--ink) !important;color:var(--bg) !important}
+.h23{transition:all .2s ease}.h23:hover{background:#F3F0E8 !important}
+.h24{transition:all .2s ease}.h24:hover{background:var(--ink) !important;color:var(--bg) !important}
+.h25{transition:all .2s ease}.h25:hover{background:var(--ink) !important;color:var(--bg) !important}
+.h26{transition:all .2s ease}.h26:hover{transform:translateY(-2px) !important}
+.h27{transition:all .2s ease}.h27:hover{background:#C8F03C !important;color:#13140F !important}
+.h28{transition:all .2s ease}.h28:hover{transform:translateY(-2px) !important}
+.h29{transition:all .2s ease}.h29:hover{background:var(--ink) !important;color:var(--bg) !important}
+.h30{transition:all .2s ease}.h30:hover{transform:translateY(-2px) !important;box-shadow:0 0 0 10px rgba(200,240,60,.22) !important}
+.h31{transition:all .2s ease}.h31:hover{color:#C8F03C !important}
+.h32{transition:all .2s ease}.h32:hover{color:#C8F03C !important}
+.h33{transition:all .2s ease}.h33:hover{color:#C8F03C !important}
+.h34{transition:all .2s ease}.h34:hover{transform:translateY(-3px) !important}
