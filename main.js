@@ -11,7 +11,11 @@ if (btn) btn.addEventListener('click', () => {
   if (isDark) root.removeAttribute('data-theme'); else root.setAttribute('data-theme', 'dark');
   localStorage.setItem('ea-theme', isDark ? 'light' : 'dark');
 });
-const hide = img => { img.style.display = 'none'; };
+// Si falla una imagen local con data-fallback, usa la de respaldo; si no, la oculta
+const hide = img => {
+  if (img.dataset.fallback && img.src !== img.dataset.fallback) { img.src = img.dataset.fallback; return; }
+  img.style.display = 'none';
+};
 document.querySelectorAll('img').forEach(img => {
   if (img.complete && img.naturalWidth === 0) hide(img);
   img.addEventListener('error', () => hide(img));

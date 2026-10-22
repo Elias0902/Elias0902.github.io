@@ -4,7 +4,7 @@ Sitio estático para GitHub Pages en https://elias0902.github.io/
 
 ## Antes de publicar
 1. Tu número en main.js (constante WHATSAPP): 58 + operadora sin 0 + número. Ej: 584141234567
-2. Tu retrato en img/elias.jpg (vertical, 4:5)
+2. Imagen principal (opcional): img/hero.jpg, vertical 4:5, mínimo 900x1125 px. Si no existe, se usa una foto general de respaldo
 3. Revisa que la captura img/natys-dashboard.png no muestre datos reales de clientes
 
 ## Publicar
