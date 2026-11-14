@@ -49,3 +49,14 @@ img{display:block}
 .h33{transition:all .2s ease}.h33:hover{color:#C8F03C !important}
 .h34{transition:all .2s ease}.h34:hover{transform:translateY(-3px) !important}
 .h35{transition:all .2s ease}.h35:hover{transform:translateY(-3px) !important;border-color:#C8F03C !important}
+
+/* Showreel (intro animada) */
+#showreel{position:relative;height:clamp(520px,calc(100svh - 100px),920px);background:#0B0C08;overflow:hidden}
+#showreel canvas{position:absolute;inset:0;width:100%;height:100%;display:block}
+.sr-ui{position:absolute;left:clamp(14px,3vw,32px);bottom:clamp(44px,5vw,58px);display:flex;gap:8px;z-index:2}
+.sr-ui button,.sr-ui a{display:inline-flex;align-items:center;height:36px;padding:0 15px;white-space:nowrap;border-radius:999px;border:1px solid rgba(243,240,232,.25);background:rgba(11,12,8,.55);color:#F3F0E8;font:500 12px 'JetBrains Mono',monospace;cursor:pointer;-webkit-backdrop-filter:blur(8px);backdrop-filter:blur(8px);transition:all .2s ease}
+.sr-ui button:hover,.sr-ui a:hover{background:#C8F03C;color:#13140F;border-color:#C8F03C}
+#showreel:not(.sr-done) #srReplay{opacity:.6}
+#showreel.sr-done #srSkip{background:#C8F03C;color:#13140F;border-color:#C8F03C}
+@media (max-width:720px){#showreel{height:clamp(500px,calc(100svh - 200px),820px)}}
+@media (max-width:520px){.sr-ui button,.sr-ui a{height:32px;padding:0 12px;font-size:11px}}

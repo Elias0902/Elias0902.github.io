@@ -47,5 +47,9 @@ document.querySelectorAll('img').forEach(img => {
     live.innerHTML = out + '</span>'.repeat(Math.max(0, open)) + caret;
     if (i < tokens.length) setTimeout(step, 40 + Math.random() * 60);
   };
-  setTimeout(step, 500);
+  // Empieza a escribir cuando el titular entra en pantalla (debajo del showreel)
+  if ('IntersectionObserver' in window) {
+    const io = new IntersectionObserver(es => { if (es.some(e => e.isIntersecting)) { io.disconnect(); setTimeout(step, 250); } }, { threshold: .4 });
+    io.observe(h1);
+  } else setTimeout(step, 500);
 })();

@@ -40,7 +40,14 @@
 </header>
 
 <main id="top">
-<section style="max-width:1200px;margin:0 auto;padding:clamp(32px,6vw,80px) clamp(18px,4vw,40px) clamp(48px,7vw,96px);display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,460px),1fr));gap:clamp(40px,5vw,72px);align-items:center;">
+<section id="showreel" aria-label="Showreel de Elías Armas, desarrollador de aplicaciones">
+  <canvas aria-hidden="true"></canvas>
+  <div class="sr-ui">
+    <button type="button" id="srReplay">↻ Repetir</button>
+    <a href="#inicio" id="srSkip">Saltar intro ↓</a>
+  </div>
+</section>
+<section id="inicio" style="scroll-margin-top:70px;max-width:1200px;margin:0 auto;padding:clamp(32px,6vw,80px) clamp(18px,4vw,40px) clamp(48px,7vw,96px);display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,460px),1fr));gap:clamp(40px,5vw,72px);align-items:center;">
   <div style="display:flex;flex-direction:column;gap:24px;">
     <div style="display:flex;flex-wrap:wrap;gap:10px;align-items:center;">
       <span style="display:inline-flex;align-items:center;gap:8px;padding:6px 12px;border-radius:999px;border:1px solid var(--line);font:500 12px 'JetBrains Mono',monospace;"><span style="color:#5BA316;">●</span> Aceptando proyectos</span>
@@ -461,5 +468,6 @@
   WhatsApp
 </a>
 <script src="main.js"></script>
+<script src="intro.js"></script>
 </body>
 </html>
