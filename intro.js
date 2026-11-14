@@ -85,7 +85,7 @@
       ctx.save(); ctx.globalAlpha *= cl(glyph);
       ctx.translate(32, 36); const g = lerp(.5, 1, glyph); ctx.scale(g, g);
       ctx.font = '800 30px Arial, Helvetica, sans-serif'; ctx.textAlign = 'center'; ctx.textBaseline = 'alphabetic';
-      ctx.fillStyle = C.cream; ctx.fillText('a', 0, 0); ctx.restore();
+      ctx.fillStyle = C.cream; ctx.fillText('ea', 0, 0); ctx.restore();
     }
     if (sweep > 0 && sweep < 1) {
       ctx.save(); rr(0, 0, 64, 64, 14); ctx.clip();
