@@ -1,3 +1,28 @@
+(() => {
+  const showreel = document.getElementById('showreel');
+  if (!showreel) return;
+
+  const status = showreel.querySelector('.sr-status');
+  let requested = false;
+  showreel.addEventListener('toggle', () => {
+    if (!showreel.open) return;
+    showreel.scrollIntoView({ block: 'start' });
+    if (requested) return;
+
+    requested = true;
+    status.textContent = 'Cargando showreel…';
+    const script = document.createElement('script');
+    script.src = './intro.js';
+    script.addEventListener('error', () => {
+      script.remove();
+      requested = false;
+      status.textContent = 'No se pudo cargar el showreel. Ciérralo y vuelve a abrirlo para reintentar.';
+    }, { once: true });
+    document.head.appendChild(script);
+  });
+  showreel.hidden = false;
+})();
+
 // Tu número de WhatsApp (código de país + número, sin + ni espacios)
 const WHATSAPP = '34604106763';
 document.querySelectorAll('a[href^="https://wa.me/"]').forEach(a => { a.href = a.href.replace(/wa\.me\/\d+/, 'wa.me/' + WHATSAPP); });
@@ -20,36 +45,3 @@ document.querySelectorAll('img').forEach(img => {
   if (img.complete && img.naturalWidth === 0) hide(img);
   img.addEventListener('error', () => hide(img));
 });
-
-// Efecto máquina de escribir en el titular
-(() => {
-  const h1 = document.getElementById('typed');
-  if (!h1 || matchMedia('(prefers-reduced-motion: reduce)').matches) return;
-  const full = h1.innerHTML;
-  h1.setAttribute('aria-label', h1.textContent.trim());
-  const ghost = document.createElement('span');
-  ghost.style.cssText = 'visibility:hidden;display:block';
-  ghost.innerHTML = full;
-  const live = document.createElement('span');
-  live.style.cssText = 'position:absolute;inset:0';
-  const wrap = document.createElement('span');
-  wrap.setAttribute('aria-hidden', 'true');
-  wrap.style.cssText = 'position:relative;display:block';
-  wrap.append(ghost, live);
-  h1.innerHTML = '';
-  h1.append(wrap);
-  const caret = '<span style="display:inline-block;width:.07em;height:.82em;margin-left:.05em;vertical-align:-.06em;background:currentColor;animation:ea-blink 1s steps(1) infinite"></span>';
-  const tokens = full.match(/<[^>]+>|[^<]/g);
-  let i = 0, out = '', open = 0;
-  const step = () => {
-    while (i < tokens.length && tokens[i].startsWith('<')) { const t = tokens[i++]; out += t; open += t.startsWith('</') ? -1 : 1; }
-    if (i < tokens.length) out += tokens[i++];
-    live.innerHTML = out + '</span>'.repeat(Math.max(0, open)) + caret;
-    if (i < tokens.length) setTimeout(step, 40 + Math.random() * 60);
-  };
-  // Empieza a escribir cuando el titular entra en pantalla (debajo del showreel)
-  if ('IntersectionObserver' in window) {
-    const io = new IntersectionObserver(es => { if (es.some(e => e.isIntersecting)) { io.disconnect(); setTimeout(step, 250); } }, { threshold: .4 });
-    io.observe(h1);
-  } else setTimeout(step, 500);
-})();

@@ -1,15 +1,21 @@
 /* Showreel de 15 s · eliasarmas.dev
    Motion graphics en <canvas>, sin librerías. Responsive (horizontal y vertical).
-   Se reproduce cuando la sección está a la vista y se pausa al salir. */
+   Se carga al abrir el showreel y se pausa al salir de la vista. */
 (() => {
   const sec = document.getElementById('showreel');
   if (!sec) return;
-  const cv = sec.querySelector('canvas');
+  const player = sec.querySelector('.sr-player');
+  const status = player.querySelector('.sr-status');
+  const controls = player.querySelector('.sr-ui');
+  const cv = player.querySelector('canvas');
   const ctx = cv.getContext('2d');
   const buf = document.createElement('canvas');
   const bctx = buf.getContext('2d');
   const btnReplay = document.getElementById('srReplay');
-  const btnSkip = document.getElementById('srSkip');
+  if (!ctx || !bctx) {
+    status.textContent = 'El showreel requiere un navegador con soporte para canvas.';
+    return;
+  }
 
   const DUR = 15;
   const C = { bg: '#0B0C08', ink: '#13140F', lime: '#C8F03C', cream: '#F3F0E8', muted: '#A9AB9F' };
@@ -28,8 +34,7 @@
   const rng = s => () => { s |= 0; s = s + 0x6D2B79F5 | 0; let t = Math.imul(s ^ s >>> 15, 1 | s); t = t + Math.imul(t ^ t >>> 7, 61 | t) ^ t; return ((t ^ t >>> 14) >>> 0) / 4294967296; };
 
   let W = 0, H = 0, DPR = 1, U = 1, PORT = false;
-  function resize() {
-    const r = sec.getBoundingClientRect();
+  function resize(r = player.getBoundingClientRect()) {
     DPR = Math.min(1.5, window.devicePixelRatio || 1);
     W = Math.max(1, r.width); H = Math.max(1, r.height);
     cv.width = buf.width = Math.round(W * DPR);
@@ -710,17 +715,33 @@
     if (playing) raf = requestAnimationFrame(tick);
   }
   function play() {
-    if (!ready || playing || done || !inView || document.hidden) return;
+    if (!ready || playing || done || !sec.open || !inView || document.hidden) return;
     playing = true; last = performance.now(); raf = requestAnimationFrame(tick);
   }
   function pause() { playing = false; if (raf) cancelAnimationFrame(raf); raf = 0; }
-  function ended() { sec.classList.add('sr-done'); if (btnSkip) btnSkip.textContent = 'Ver más ↓'; }
-  function replay() { pause(); t = 0; done = false; sec.classList.remove('sr-done'); if (btnSkip) btnSkip.textContent = 'Saltar intro ↓'; render(); play(); }
+  function ended() { sec.classList.add('sr-done'); }
+  function replay() {
+    pause();
+    t = 0;
+    done = false;
+    sec.classList.remove('sr-done');
+    render();
+    play();
+  }
   if (btnReplay) btnReplay.addEventListener('click', replay);
 
-  new IntersectionObserver(es => { inView = es[0].isIntersecting; inView ? play() : pause(); }, { threshold: .35 }).observe(sec);
+  const visibilityThreshold = .35;
+  new IntersectionObserver(([entry]) => {
+    inView = entry.intersectionRatio >= visibilityThreshold;
+    if (inView) play(); else pause();
+  }, { threshold: visibilityThreshold }).observe(player);
+  sec.addEventListener('toggle', () => (sec.open ? play() : pause()));
   document.addEventListener('visibilitychange', () => (document.hidden ? pause() : play()));
-  new ResizeObserver(() => { resize(); render(); }).observe(sec);
+  new ResizeObserver(([entry]) => {
+    if (!ready || !sec.open) return;
+    resize(entry.contentRect);
+    render();
+  }).observe(player);
 
   const fontsReady = document.fonts
     ? Promise.race([
@@ -728,10 +749,20 @@
         new Promise(r => setTimeout(r, 1800)),
       ])
     : Promise.resolve();
-  fontsReady.then(() => {
-    resize(); ready = true;
-    if (reduce) { t = DUR; done = true; render(); ended(); return; }
-    render(); play();
+  fontsReady.catch(() => {}).then(() => {
+    ready = true;
+    if (reduce) {
+      t = DUR;
+      done = true;
+      ended();
+    }
+    if (sec.open) {
+      resize();
+      render();
+    }
+    status.textContent = '';
+    controls.hidden = false;
+    play();
   });
 
   // Para exportar fotogramas (pruebas): window.__srFrame(segundos)
