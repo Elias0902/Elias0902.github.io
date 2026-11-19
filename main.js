@@ -20,7 +20,14 @@
     }, { once: true });
     document.head.appendChild(script);
   });
-  showreel.hidden = false;
+  document.querySelectorAll('a[href="#showreel"]').forEach(link => {
+    link.addEventListener('click', event => {
+      event.preventDefault();
+      showreel.open = true;
+      showreel.querySelector('summary').focus({ preventScroll: true });
+      showreel.scrollIntoView({ block: 'start' });
+    });
+  });
 })();
 
 // Tu número de WhatsApp (código de país + número, sin + ni espacios)

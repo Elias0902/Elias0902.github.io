@@ -94,6 +94,7 @@
 <section id="inicio" style="scroll-margin-top:70px;max-width:1200px;margin:0 auto;padding:clamp(32px,6vw,80px) clamp(18px,4vw,40px) clamp(48px,7vw,96px);display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,460px),1fr));gap:clamp(40px,5vw,72px);align-items:center;">
   <div style="display:flex;flex-direction:column;gap:24px;">
     <span style="display:inline-flex;align-self:flex-start;align-items:center;gap:8px;padding:6px 12px;border-radius:999px;border:1px solid var(--line);font:500 12px 'JetBrains Mono',monospace;"><span style="color:#5BA316;">●</span> Aceptando proyectos</span>
+    <a class="showreel-link" href="#showreel" aria-controls="showreel">▶ Ver mi showreel · 15 s</a>
     <h1 style="margin:0;font-size:clamp(40px,6vw,72px);line-height:.96;font-weight:800;letter-spacing:-0.045em;text-wrap:balance;">Elías Armas, desarrollador web <span style="background:linear-gradient(180deg,transparent 58%,#C8F03C 58%,#C8F03C 92%,transparent 92%);">freelance</span></h1>
     <p style="margin:0;max-width:540px;font-size:clamp(17px,1.6vw,20px);line-height:1.5;color:var(--muted);text-wrap:pretty;">Hago que tu negocio venda incluso cuando duermes. Construyo webs a medida, sistemas de pedidos e inventario y asistentes con IA que atienden tu WhatsApp. Hablas directo conmigo, con precios fijos.</p>
     <div style="display:flex;flex-wrap:wrap;gap:12px;">
@@ -128,11 +129,12 @@
   </div>
 </section>
 
-<details id="showreel" hidden>
+<details id="showreel">
   <summary><span aria-hidden="true">▶</span> Ver showreel · 15 s</summary>
   <div class="sr-player">
     <canvas aria-hidden="true"></canvas>
     <p class="sr-status" role="status"></p>
+    <noscript><p style="color:#F3F0E8;padding:24px;">Activa JavaScript para reproducir el showreel.</p></noscript>
     <div class="sr-ui" hidden>
       <button type="button" id="srReplay">↻ Repetir</button>
       <a href="#tecnologias" id="srSkip">Continuar ↓</a>
@@ -193,7 +195,7 @@
           <img src="img/artistas/01-luis-fonsi.webp" alt="Luis Fonsi" loading="lazy" style="width:100%;height:100%;object-fit:cover;transition:transform .3s;" onmouseover="this.style.transform='scale(1.05)'" onmouseout="this.style.transform='scale(1)'">
           <span style="position:absolute;top:10px;left:10px;padding:4px 10px;border-radius:999px;background:#C8F03C;color:#13140F;font:700 11px 'JetBrains Mono',monospace;">01</span>
         </div>
-        <div style="display:flex;flex-direction:column;gap:8px;padding:16px;">
+        <div class="artist-copy">
           <h3 style="margin:0;font-size:20px;font-weight:800;letter-spacing:-0.03em;">Luis Fonsi</h3>
           <p style="margin:0;font:400 12px/1.4 'JetBrains Mono',monospace;color:#A9AB9F;">Puerto Rico · Pop latino</p>
           <p style="margin:0;font-size:14px;line-height:1.45;color:#D1D3C8;">"Despacito" es la canción #1 de todos los tiempos en Hot Latin Songs de Billboard.</p>
@@ -207,7 +209,7 @@
           <img src="img/artistas/02-david-bisbal.webp" alt="David Bisbal" loading="lazy" style="width:100%;height:100%;object-fit:cover;transition:transform .3s;" onmouseover="this.style.transform='scale(1.05)'" onmouseout="this.style.transform='scale(1)'">
           <span style="position:absolute;top:10px;left:10px;padding:4px 10px;border-radius:999px;background:#C8F03C;color:#13140F;font:700 11px 'JetBrains Mono',monospace;">02</span>
         </div>
-        <div style="display:flex;flex-direction:column;gap:8px;padding:16px;">
+        <div class="artist-copy">
           <h3 style="margin:0;font-size:20px;font-weight:800;letter-spacing:-0.03em;">David Bisbal</h3>
           <p style="margin:0;font:400 12px/1.4 'JetBrains Mono',monospace;color:#A9AB9F;">España · Pop flamenco</p>
           <p style="margin:0;font-size:14px;line-height:1.45;color:#D1D3C8;">Surgido de Operación Triunfo 2002, referente del pop español con éxitos como "A partir de hoy".</p>
@@ -221,7 +223,7 @@
           <img src="img/artistas/03-ana-gabriel.webp" alt="Ana Gabriel" loading="lazy" style="width:100%;height:100%;object-fit:cover;transition:transform .3s;" onmouseover="this.style.transform='scale(1.05)'" onmouseout="this.style.transform='scale(1)'">
           <span style="position:absolute;top:10px;left:10px;padding:4px 10px;border-radius:999px;background:#C8F03C;color:#13140F;font:700 11px 'JetBrains Mono',monospace;">03</span>
         </div>
-        <div style="display:flex;flex-direction:column;gap:8px;padding:16px;">
+        <div class="artist-copy">
           <h3 style="margin:0;font-size:20px;font-weight:800;letter-spacing:-0.03em;">Ana Gabriel</h3>
           <p style="margin:0;font:400 12px/1.4 'JetBrains Mono',monospace;color:#A9AB9F;">México · Balada ranchera</p>
           <p style="margin:0;font-size:14px;line-height:1.45;color:#D1D3C8;">"La Diva de América", con clásicos como "Simplemente Amigos" y "Quién Como Tú".</p>
@@ -235,7 +237,7 @@
           <img src="img/artistas/04-malu.webp" alt="Malú" loading="lazy" style="width:100%;height:100%;object-fit:cover;transition:transform .3s;" onmouseover="this.style.transform='scale(1.05)'" onmouseout="this.style.transform='scale(1)'">
           <span style="position:absolute;top:10px;left:10px;padding:4px 10px;border-radius:999px;background:#C8F03C;color:#13140F;font:700 11px 'JetBrains Mono',monospace;">04</span>
         </div>
-        <div style="display:flex;flex-direction:column;gap:8px;padding:16px;">
+        <div class="artist-copy">
           <h3 style="margin:0;font-size:20px;font-weight:800;letter-spacing:-0.03em;">Malú</h3>
           <p style="margin:0;font:400 12px/1.4 'JetBrains Mono',monospace;color:#A9AB9F;">España · Pop rock</p>
           <p style="margin:0;font-size:14px;line-height:1.45;color:#D1D3C8;">Voz referente del pop español, con himnos como "Blanco y Negro" y "Aprendiz".</p>
@@ -249,7 +251,7 @@
           <img src="img/artistas/05-alex-ubago.webp" alt="Álex Ubago" loading="lazy" style="width:100%;height:100%;object-fit:cover;transition:transform .3s;" onmouseover="this.style.transform='scale(1.05)'" onmouseout="this.style.transform='scale(1)'">
           <span style="position:absolute;top:10px;left:10px;padding:4px 10px;border-radius:999px;background:#C8F03C;color:#13140F;font:700 11px 'JetBrains Mono',monospace;">05</span>
         </div>
-        <div style="display:flex;flex-direction:column;gap:8px;padding:16px;">
+        <div class="artist-copy">
           <h3 style="margin:0;font-size:20px;font-weight:800;letter-spacing:-0.03em;">Álex Ubago</h3>
           <p style="margin:0;font:400 12px/1.4 'JetBrains Mono',monospace;color:#A9AB9F;">España · Pop romántico</p>
           <p style="margin:0;font-size:14px;line-height:1.45;color:#D1D3C8;">"Sin miedo a nada" y "A gritos de esperanza" marcaron el pop romántico de los 2000.</p>
@@ -263,7 +265,7 @@
           <img src="img/artistas/06-paola-jara.webp" alt="Paola Jara" loading="lazy" style="width:100%;height:100%;object-fit:cover;transition:transform .3s;" onmouseover="this.style.transform='scale(1.05)'" onmouseout="this.style.transform='scale(1)'">
           <span style="position:absolute;top:10px;left:10px;padding:4px 10px;border-radius:999px;background:#C8F03C;color:#13140F;font:700 11px 'JetBrains Mono',monospace;">06</span>
         </div>
-        <div style="display:flex;flex-direction:column;gap:8px;padding:16px;">
+        <div class="artist-copy">
           <h3 style="margin:0;font-size:20px;font-weight:800;letter-spacing:-0.03em;">Paola Jara</h3>
           <p style="margin:0;font:400 12px/1.4 'JetBrains Mono',monospace;color:#A9AB9F;">Colombia · Música popular</p>
           <p style="margin:0;font-size:14px;line-height:1.45;color:#D1D3C8;">Reina de la música popular colombiana, con éxitos como "Murió el Amor" y "Salud por Él".</p>
@@ -277,7 +279,7 @@
           <img src="img/artistas/07-mike-bahia.webp" alt="Mike Bahía" loading="lazy" style="width:100%;height:100%;object-fit:cover;transition:transform .3s;" onmouseover="this.style.transform='scale(1.05)'" onmouseout="this.style.transform='scale(1)'">
           <span style="position:absolute;top:10px;left:10px;padding:4px 10px;border-radius:999px;background:#C8F03C;color:#13140F;font:700 11px 'JetBrains Mono',monospace;">07</span>
         </div>
-        <div style="display:flex;flex-direction:column;gap:8px;padding:16px;">
+        <div class="artist-copy">
           <h3 style="margin:0;font-size:20px;font-weight:800;letter-spacing:-0.03em;">Mike Bahía</h3>
           <p style="margin:0;font:400 12px/1.4 'JetBrains Mono',monospace;color:#A9AB9F;">Colombia · Pop urbano</p>
           <p style="margin:0;font-size:14px;line-height:1.45;color:#D1D3C8;">"Esta Noche" junto a Greeicy y "Detente" con Danny Ocean lo consolidaron en el pop urbano.</p>
@@ -291,7 +293,7 @@
           <img src="img/artistas/08-pipe-pelaez.webp" alt="Pipe Peláez" loading="lazy" style="width:100%;height:100%;object-fit:cover;transition:transform .3s;" onmouseover="this.style.transform='scale(1.05)'" onmouseout="this.style.transform='scale(1)'">
           <span style="position:absolute;top:10px;left:10px;padding:4px 10px;border-radius:999px;background:#C8F03C;color:#13140F;font:700 11px 'JetBrains Mono',monospace;">08</span>
         </div>
-        <div style="display:flex;flex-direction:column;gap:8px;padding:16px;">
+        <div class="artist-copy">
           <h3 style="margin:0;font-size:20px;font-weight:800;letter-spacing:-0.03em;">Pipe Peláez</h3>
           <p style="margin:0;font:400 12px/1.4 'JetBrains Mono',monospace;color:#A9AB9F;">Colombia · Vallenato</p>
           <p style="margin:0;font-size:14px;line-height:1.45;color:#D1D3C8;">Uno de los grandes del vallenato contemporáneo, con "Tan Natural" y "Vestirte de Amor".</p>
@@ -305,7 +307,7 @@
           <img src="img/artistas/09-pablo-alboran.webp" alt="Pablo Alborán" loading="lazy" style="width:100%;height:100%;object-fit:cover;transition:transform .3s;" onmouseover="this.style.transform='scale(1.05)'" onmouseout="this.style.transform='scale(1)'">
           <span style="position:absolute;top:10px;left:10px;padding:4px 10px;border-radius:999px;background:#C8F03C;color:#13140F;font:700 11px 'JetBrains Mono',monospace;">09</span>
         </div>
-        <div style="display:flex;flex-direction:column;gap:8px;padding:16px;">
+        <div class="artist-copy">
           <h3 style="margin:0;font-size:20px;font-weight:800;letter-spacing:-0.03em;">Pablo Alborán</h3>
           <p style="margin:0;font:400 12px/1.4 'JetBrains Mono',monospace;color:#A9AB9F;">España · Pop balada</p>
           <p style="margin:0;font-size:14px;line-height:1.45;color:#D1D3C8;">Autor de "Saturno" y "Solamente Tú", con más de 30 discos de platino y varios Grammy Latinos.</p>
@@ -319,7 +321,7 @@
           <img src="img/artistas/10-circo-marisko.webp" alt="Circo Marisko" loading="lazy" style="width:100%;height:100%;object-fit:cover;transition:transform .3s;" onmouseover="this.style.transform='scale(1.05)'" onmouseout="this.style.transform='scale(1)'">
           <span style="position:absolute;top:10px;left:10px;padding:4px 10px;border-radius:999px;background:#C8F03C;color:#13140F;font:700 11px 'JetBrains Mono',monospace;">10</span>
         </div>
-        <div style="display:flex;flex-direction:column;gap:8px;padding:16px;">
+        <div class="artist-copy">
           <h3 style="margin:0;font-size:20px;font-weight:800;letter-spacing:-0.03em;">Circo Marisko</h3>
           <p style="margin:0;font:400 12px/1.4 'JetBrains Mono',monospace;color:#A9AB9F;">Argentina · Humor / Circo</p>
           <p style="margin:0;font-size:14px;line-height:1.45;color:#D1D3C8;">Dúo viral de humor físico y callejero, ganador del Premio Carlos 2026 [citation:24].</p>
@@ -333,7 +335,7 @@
           <img src="img/artistas/11-la-granja-de-zenon.webp" alt="La Granja de Zenón" loading="lazy" style="width:100%;height:100%;object-fit:cover;transition:transform .3s;" onmouseover="this.style.transform='scale(1.05)'" onmouseout="this.style.transform='scale(1)'">
           <span style="position:absolute;top:10px;left:10px;padding:4px 10px;border-radius:999px;background:#C8F03C;color:#13140F;font:700 11px 'JetBrains Mono',monospace;">11</span>
         </div>
-        <div style="display:flex;flex-direction:column;gap:8px;padding:16px;">
+        <div class="artist-copy">
           <h3 style="margin:0;font-size:20px;font-weight:800;letter-spacing:-0.03em;">La Granja de Zenón</h3>
           <p style="margin:0;font:400 12px/1.4 'JetBrains Mono',monospace;color:#A9AB9F;">Argentina · Infantil</p>
           <p style="margin:0;font-size:14px;line-height:1.45;color:#D1D3C8;">Fenómeno infantil con más de 46 millones de suscriptores; "La Vaca Lola" supera los 2.500 millones de vistas [citation:2].</p>
@@ -347,7 +349,7 @@
           <img src="img/artistas/12-plim-plim.webp" alt="Plim Plim" loading="lazy" style="width:100%;height:100%;object-fit:cover;transition:transform .3s;" onmouseover="this.style.transform='scale(1.05)'" onmouseout="this.style.transform='scale(1)'">
           <span style="position:absolute;top:10px;left:10px;padding:4px 10px;border-radius:999px;background:#C8F03C;color:#13140F;font:700 11px 'JetBrains Mono',monospace;">12</span>
         </div>
-        <div style="display:flex;flex-direction:column;gap:8px;padding:16px;">
+        <div class="artist-copy">
           <h3 style="margin:0;font-size:20px;font-weight:800;letter-spacing:-0.03em;">Plim Plim</h3>
           <p style="margin:0;font:400 12px/1.4 'JetBrains Mono',monospace;color:#A9AB9F;">Argentina · Infantil</p>
           <p style="margin:0;font-size:14px;line-height:1.45;color:#D1D3C8;">"Abejita Chiquitita" supera los 1.400 millones de reproducciones; su canal es top mundial en kids [citation:3][citation:19].</p>
@@ -361,7 +363,7 @@
           <img src="img/artistas/13-imitador-luis-miguel-ricky-santos.webp" alt="Imitador Luis Miguel" loading="lazy" style="width:100%;height:100%;object-fit:cover;transition:transform .3s;" onmouseover="this.style.transform='scale(1.05)'" onmouseout="this.style.transform='scale(1)'">
           <span style="position:absolute;top:10px;left:10px;padding:4px 10px;border-radius:999px;background:#C8F03C;color:#13140F;font:700 11px 'JetBrains Mono',monospace;">13</span>
         </div>
-        <div style="display:flex;flex-direction:column;gap:8px;padding:16px;">
+        <div class="artist-copy">
           <h3 style="margin:0;font-size:20px;font-weight:800;letter-spacing:-0.03em;">Imitador Luis Miguel</h3>
           <p style="margin:0;font:400 12px/1.4 'JetBrains Mono',monospace;color:#A9AB9F;">Tributo · Balada</p>
           <p style="margin:0;font-size:14px;line-height:1.45;color:#D1D3C8;">Show de imitación del "Sol de México", con sus grandes éxitos románticos.</p>
@@ -375,7 +377,7 @@
           <img src="img/artistas/14-imitador-luis-miguel-byron.webp" alt="Imitador Luis Miguel" loading="lazy" style="width:100%;height:100%;object-fit:cover;transition:transform .3s;" onmouseover="this.style.transform='scale(1.05)'" onmouseout="this.style.transform='scale(1)'">
           <span style="position:absolute;top:10px;left:10px;padding:4px 10px;border-radius:999px;background:#C8F03C;color:#13140F;font:700 11px 'JetBrains Mono',monospace;">14</span>
         </div>
-        <div style="display:flex;flex-direction:column;gap:8px;padding:16px;">
+        <div class="artist-copy">
           <h3 style="margin:0;font-size:20px;font-weight:800;letter-spacing:-0.03em;">Imitador Luis Miguel</h3>
           <p style="margin:0;font:400 12px/1.4 'JetBrains Mono',monospace;color:#A9AB9F;">Tributo · Balada</p>
           <p style="margin:0;font-size:14px;line-height:1.45;color:#D1D3C8;">Tributo a la voz y presencia del intérprete mexicano más icónico.</p>
@@ -389,7 +391,7 @@
           <img src="img/artistas/15-victor-manuel.webp" alt="Víctor Manuel" loading="lazy" style="width:100%;height:100%;object-fit:cover;transition:transform .3s;" onmouseover="this.style.transform='scale(1.05)'" onmouseout="this.style.transform='scale(1)'">
           <span style="position:absolute;top:10px;left:10px;padding:4px 10px;border-radius:999px;background:#C8F03C;color:#13140F;font:700 11px 'JetBrains Mono',monospace;">15</span>
         </div>
-        <div style="display:flex;flex-direction:column;gap:8px;padding:16px;">
+        <div class="artist-copy">
           <h3 style="margin:0;font-size:20px;font-weight:800;letter-spacing:-0.03em;">Víctor Manuel</h3>
           <p style="margin:0;font:400 12px/1.4 'JetBrains Mono',monospace;color:#A9AB9F;">España · Cantautor</p>
           <p style="margin:0;font-size:14px;line-height:1.45;color:#D1D3C8;">Referente de la canción de autor española, con himnos como "Solo pienso en ti".</p>
@@ -403,7 +405,7 @@
           <img src="img/artistas/16-imitadores-queen.webp" alt="Imitadores Queen" loading="lazy" style="width:100%;height:100%;object-fit:cover;transition:transform .3s;" onmouseover="this.style.transform='scale(1.05)'" onmouseout="this.style.transform='scale(1)'">
           <span style="position:absolute;top:10px;left:10px;padding:4px 10px;border-radius:999px;background:#C8F03C;color:#13140F;font:700 11px 'JetBrains Mono',monospace;">16</span>
         </div>
-        <div style="display:flex;flex-direction:column;gap:8px;padding:16px;">
+        <div class="artist-copy">
           <h3 style="margin:0;font-size:20px;font-weight:800;letter-spacing:-0.03em;">Imitadores Queen</h3>
           <p style="margin:0;font:400 12px/1.4 'JetBrains Mono',monospace;color:#A9AB9F;">Tributo · Rock</p>
           <p style="margin:0;font-size:14px;line-height:1.45;color:#D1D3C8;">Revive la energía de Freddie Mercury y los grandes himnos de Queen.</p>
@@ -417,7 +419,7 @@
           <img src="img/artistas/17-felipe-avello.webp" alt="Felipe Avello" loading="lazy" style="width:100%;height:100%;object-fit:cover;transition:transform .3s;" onmouseover="this.style.transform='scale(1.05)'" onmouseout="this.style.transform='scale(1)'">
           <span style="position:absolute;top:10px;left:10px;padding:4px 10px;border-radius:999px;background:#C8F03C;color:#13140F;font:700 11px 'JetBrains Mono',monospace;">17</span>
         </div>
-        <div style="display:flex;flex-direction:column;gap:8px;padding:16px;">
+        <div class="artist-copy">
           <h3 style="margin:0;font-size:20px;font-weight:800;letter-spacing:-0.03em;">Felipe Avello</h3>
           <p style="margin:0;font:400 12px/1.4 'JetBrains Mono',monospace;color:#A9AB9F;">Chile · Humor</p>
           <p style="margin:0;font-size:14px;line-height:1.45;color:#D1D3C8;">Comediante chileno conocido por su humor absurdo y su paso por Morandé con Compañía.</p>
@@ -431,7 +433,7 @@
           <img src="img/artistas/18-cristian-castro.webp" alt="Cristian Castro" loading="lazy" style="width:100%;height:100%;object-fit:cover;transition:transform .3s;" onmouseover="this.style.transform='scale(1.05)'" onmouseout="this.style.transform='scale(1)'">
           <span style="position:absolute;top:10px;left:10px;padding:4px 10px;border-radius:999px;background:#C8F03C;color:#13140F;font:700 11px 'JetBrains Mono',monospace;">18</span>
         </div>
-        <div style="display:flex;flex-direction:column;gap:8px;padding:16px;">
+        <div class="artist-copy">
           <h3 style="margin:0;font-size:20px;font-weight:800;letter-spacing:-0.03em;">Cristian Castro</h3>
           <p style="margin:0;font:400 12px/1.4 'JetBrains Mono',monospace;color:#A9AB9F;">México · Balada pop</p>
           <p style="margin:0;font-size:14px;line-height:1.45;color:#D1D3C8;">Hijo de Verónica Castro, con éxitos como "Azul" y "Por Amarte Así".</p>
@@ -445,7 +447,7 @@
           <img src="img/artistas/19-nicky-jam.webp" alt="Nicky Jam" loading="lazy" style="width:100%;height:100%;object-fit:cover;transition:transform .3s;" onmouseover="this.style.transform='scale(1.05)'" onmouseout="this.style.transform='scale(1)'">
           <span style="position:absolute;top:10px;left:10px;padding:4px 10px;border-radius:999px;background:#C8F03C;color:#13140F;font:700 11px 'JetBrains Mono',monospace;">19</span>
         </div>
-        <div style="display:flex;flex-direction:column;gap:8px;padding:16px;">
+        <div class="artist-copy">
           <h3 style="margin:0;font-size:20px;font-weight:800;letter-spacing:-0.03em;">Nicky Jam</h3>
           <p style="margin:0;font:400 12px/1.4 'JetBrains Mono',monospace;color:#A9AB9F;">EE.UU. / Puerto Rico · Reggaetón</p>
           <p style="margin:0;font-size:14px;line-height:1.45;color:#D1D3C8;">Ícono del reggaetón con "El Perdón" y "Hasta el Amanecer", ganador del Latin Grammy.</p>
@@ -459,7 +461,7 @@
           <img src="img/artistas/20-cebolla-bodoque.webp" alt="Cebolla y Bodoque" loading="lazy" style="width:100%;height:100%;object-fit:cover;transition:transform .3s;" onmouseover="this.style.transform='scale(1.05)'" onmouseout="this.style.transform='scale(1)'">
           <span style="position:absolute;top:10px;left:10px;padding:4px 10px;border-radius:999px;background:#C8F03C;color:#13140F;font:700 11px 'JetBrains Mono',monospace;">20</span>
         </div>
-        <div style="display:flex;flex-direction:column;gap:8px;padding:16px;">
+        <div class="artist-copy">
           <h3 style="margin:0;font-size:20px;font-weight:800;letter-spacing:-0.03em;">Cebolla y Bodoque</h3>
           <p style="margin:0;font:400 12px/1.4 'JetBrains Mono',monospace;color:#A9AB9F;">Chile · Humor</p>
           <p style="margin:0;font-size:14px;line-height:1.45;color:#D1D3C8;">Ex dúo de Fusión Humor, con 20 años de trayectoria y paso por Viña del Mar [citation:17].</p>
@@ -473,7 +475,7 @@
           <img src="img/artistas/21-pimpinela.webp" alt="Pimpinela" loading="lazy" style="width:100%;height:100%;object-fit:cover;transition:transform .3s;" onmouseover="this.style.transform='scale(1.05)'" onmouseout="this.style.transform='scale(1)'">
           <span style="position:absolute;top:10px;left:10px;padding:4px 10px;border-radius:999px;background:#C8F03C;color:#13140F;font:700 11px 'JetBrains Mono',monospace;">21</span>
         </div>
-        <div style="display:flex;flex-direction:column;gap:8px;padding:16px;">
+        <div class="artist-copy">
           <h3 style="margin:0;font-size:20px;font-weight:800;letter-spacing:-0.03em;">Pimpinela</h3>
           <p style="margin:0;font:400 12px/1.4 'JetBrains Mono',monospace;color:#A9AB9F;">Argentina · Balada / Dúo</p>
           <p style="margin:0;font-size:14px;line-height:1.45;color:#D1D3C8;">Dúo hermano icónico de la balada en español, con "Olvídame y Pega la Vuelta".</p>
@@ -487,7 +489,7 @@
           <img src="img/artistas/22-mijares.webp" alt="Mijares" loading="lazy" style="width:100%;height:100%;object-fit:cover;transition:transform .3s;" onmouseover="this.style.transform='scale(1.05)'" onmouseout="this.style.transform='scale(1)'">
           <span style="position:absolute;top:10px;left:10px;padding:4px 10px;border-radius:999px;background:#C8F03C;color:#13140F;font:700 11px 'JetBrains Mono',monospace;">22</span>
         </div>
-        <div style="display:flex;flex-direction:column;gap:8px;padding:16px;">
+        <div class="artist-copy">
           <h3 style="margin:0;font-size:20px;font-weight:800;letter-spacing:-0.03em;">Mijares</h3>
           <p style="margin:0;font:400 12px/1.4 'JetBrains Mono',monospace;color:#A9AB9F;">México · Balada pop</p>
           <p style="margin:0;font-size:14px;line-height:1.45;color:#D1D3C8;">Voz romántica de los 80 y 90, con éxitos como "Para Amarnos Más" y "Bella".</p>
@@ -501,7 +503,7 @@
           <img src="img/artistas/23-kany-garcia.webp" alt="Kany García" loading="lazy" style="width:100%;height:100%;object-fit:cover;transition:transform .3s;" onmouseover="this.style.transform='scale(1.05)'" onmouseout="this.style.transform='scale(1)'">
           <span style="position:absolute;top:10px;left:10px;padding:4px 10px;border-radius:999px;background:#C8F03C;color:#13140F;font:700 11px 'JetBrains Mono',monospace;">23</span>
         </div>
-        <div style="display:flex;flex-direction:column;gap:8px;padding:16px;">
+        <div class="artist-copy">
           <h3 style="margin:0;font-size:20px;font-weight:800;letter-spacing:-0.03em;">Kany García</h3>
           <p style="margin:0;font:400 12px/1.4 'JetBrains Mono',monospace;color:#A9AB9F;">Puerto Rico · Cantautora</p>
           <p style="margin:0;font-size:14px;line-height:1.45;color:#D1D3C8;">Ganadora de múltiples Latin Grammy, con letras como "Hoy Ya Me Voy" y "Para Siempre".</p>
@@ -515,7 +517,7 @@
           <img src="img/artistas/24-diego-torres.webp" alt="Diego Torres" loading="lazy" style="width:100%;height:100%;object-fit:cover;transition:transform .3s;" onmouseover="this.style.transform='scale(1.05)'" onmouseout="this.style.transform='scale(1)'">
           <span style="position:absolute;top:10px;left:10px;padding:4px 10px;border-radius:999px;background:#C8F03C;color:#13140F;font:700 11px 'JetBrains Mono',monospace;">24</span>
         </div>
-        <div style="display:flex;flex-direction:column;gap:8px;padding:16px;">
+        <div class="artist-copy">
           <h3 style="margin:0;font-size:20px;font-weight:800;letter-spacing:-0.03em;">Diego Torres</h3>
           <p style="margin:0;font:400 12px/1.4 'JetBrains Mono',monospace;color:#A9AB9F;">Argentina · Pop latino</p>
           <p style="margin:0;font-size:14px;line-height:1.45;color:#D1D3C8;">Autor de "Color Esperanza", himno latinoamericano, y "Penélope".</p>
@@ -529,7 +531,7 @@
           <img src="img/artistas/25-manuel-turizo.webp" alt="Manuel Turizo" loading="lazy" style="width:100%;height:100%;object-fit:cover;transition:transform .3s;" onmouseover="this.style.transform='scale(1.05)'" onmouseout="this.style.transform='scale(1)'">
           <span style="position:absolute;top:10px;left:10px;padding:4px 10px;border-radius:999px;background:#C8F03C;color:#13140F;font:700 11px 'JetBrains Mono',monospace;">25</span>
         </div>
-        <div style="display:flex;flex-direction:column;gap:8px;padding:16px;">
+        <div class="artist-copy">
           <h3 style="margin:0;font-size:20px;font-weight:800;letter-spacing:-0.03em;">Manuel Turizo</h3>
           <p style="margin:0;font:400 12px/1.4 'JetBrains Mono',monospace;color:#A9AB9F;">Colombia · Reggaetón / Pop urbano</p>
           <p style="margin:0;font-size:14px;line-height:1.45;color:#D1D3C8;">"Una Lady Como Tú" y "La Bachata" lo llevaron a ser uno de los artistas urbanos más escuchados.</p>
@@ -543,7 +545,7 @@
           <img src="img/artistas/26-fonseca.webp" alt="Fonseca" loading="lazy" style="width:100%;height:100%;object-fit:cover;transition:transform .3s;" onmouseover="this.style.transform='scale(1.05)'" onmouseout="this.style.transform='scale(1)'">
           <span style="position:absolute;top:10px;left:10px;padding:4px 10px;border-radius:999px;background:#C8F03C;color:#13140F;font:700 11px 'JetBrains Mono',monospace;">26</span>
         </div>
-        <div style="display:flex;flex-direction:column;gap:8px;padding:16px;">
+        <div class="artist-copy">
           <h3 style="margin:0;font-size:20px;font-weight:800;letter-spacing:-0.03em;">Fonseca</h3>
           <p style="margin:0;font:400 12px/1.4 'JetBrains Mono',monospace;color:#A9AB9F;">Colombia · Vallenato / Pop</p>
           <p style="margin:0;font-size:14px;line-height:1.45;color:#D1D3C8;">Ganador del Latin Grammy, fusiona vallenato con pop en éxitos como "Te Mando Flores".</p>
@@ -557,7 +559,7 @@
           <img src="img/artistas/27-maelo-ruiz.webp" alt="Mäelo Ruiz" loading="lazy" style="width:100%;height:100%;object-fit:cover;transition:transform .3s;" onmouseover="this.style.transform='scale(1.05)'" onmouseout="this.style.transform='scale(1)'">
           <span style="position:absolute;top:10px;left:10px;padding:4px 10px;border-radius:999px;background:#C8F03C;color:#13140F;font:700 11px 'JetBrains Mono',monospace;">27</span>
         </div>
-        <div style="display:flex;flex-direction:column;gap:8px;padding:16px;">
+        <div class="artist-copy">
           <h3 style="margin:0;font-size:20px;font-weight:800;letter-spacing:-0.03em;">Mäelo Ruiz</h3>
           <p style="margin:0;font:400 12px/1.4 'JetBrains Mono',monospace;color:#A9AB9F;">Chile · Pop / Urbano</p>
           <p style="margin:0;font-size:14px;line-height:1.45;color:#D1D3C8;">Artista emergente de la nueva escena chilena, con propuesta de pop urbano.</p>
@@ -571,7 +573,7 @@
           <img src="img/artistas/28-marco-antonio-solis.webp" alt="Marco Antonio Solís" loading="lazy" style="width:100%;height:100%;object-fit:cover;transition:transform .3s;" onmouseover="this.style.transform='scale(1.05)'" onmouseout="this.style.transform='scale(1)'">
           <span style="position:absolute;top:10px;left:10px;padding:4px 10px;border-radius:999px;background:#C8F03C;color:#13140F;font:700 11px 'JetBrains Mono',monospace;">28</span>
         </div>
-        <div style="display:flex;flex-direction:column;gap:8px;padding:16px;">
+        <div class="artist-copy">
           <h3 style="margin:0;font-size:20px;font-weight:800;letter-spacing:-0.03em;">Marco Antonio Solís</h3>
           <p style="margin:0;font:400 12px/1.4 'JetBrains Mono',monospace;color:#A9AB9F;">México · Balada / Regional</p>
           <p style="margin:0;font-size:14px;line-height:1.45;color:#D1D3C8;">"El Buki", leyenda de la música romántica con "Más Que Tu Amigo" y "Si No Te Hubieras Ido".</p>
@@ -585,7 +587,7 @@
           <img src="img/artistas/29-raphael.webp" alt="Raphael" loading="lazy" style="width:100%;height:100%;object-fit:cover;transition:transform .3s;" onmouseover="this.style.transform='scale(1.05)'" onmouseout="this.style.transform='scale(1)'">
           <span style="position:absolute;top:10px;left:10px;padding:4px 10px;border-radius:999px;background:#C8F03C;color:#13140F;font:700 11px 'JetBrains Mono',monospace;">29</span>
         </div>
-        <div style="display:flex;flex-direction:column;gap:8px;padding:16px;">
+        <div class="artist-copy">
           <h3 style="margin:0;font-size:20px;font-weight:800;letter-spacing:-0.03em;">Raphael</h3>
           <p style="margin:0;font:400 12px/1.4 'JetBrains Mono',monospace;color:#A9AB9F;">España · Balada</p>
           <p style="margin:0;font-size:14px;line-height:1.45;color:#D1D3C8;">Leyenda viva de la balada española, con "Mi Gran Noche" y "Yo Soy Aquél".</p>
@@ -599,7 +601,7 @@
           <img src="img/artistas/30-isabel-pantoja.webp" alt="Isabel Pantoja" loading="lazy" style="width:100%;height:100%;object-fit:cover;transition:transform .3s;" onmouseover="this.style.transform='scale(1.05)'" onmouseout="this.style.transform='scale(1)'">
           <span style="position:absolute;top:10px;left:10px;padding:4px 10px;border-radius:999px;background:#C8F03C;color:#13140F;font:700 11px 'JetBrains Mono',monospace;">30</span>
         </div>
-        <div style="display:flex;flex-direction:column;gap:8px;padding:16px;">
+        <div class="artist-copy">
           <h3 style="margin:0;font-size:20px;font-weight:800;letter-spacing:-0.03em;">Isabel Pantoja</h3>
           <p style="margin:0;font:400 12px/1.4 'JetBrains Mono',monospace;color:#A9AB9F;">España · Copla / Balada</p>
           <p style="margin:0;font-size:14px;line-height:1.45;color:#D1D3C8;">"La Reina de la Copla", con una carrera que abarca décadas de éxitos populares.</p>
@@ -613,7 +615,7 @@
           <img src="img/artistas/31-grupo-niche.webp" alt="Grupo Niche" loading="lazy" style="width:100%;height:100%;object-fit:cover;transition:transform .3s;" onmouseover="this.style.transform='scale(1.05)'" onmouseout="this.style.transform='scale(1)'">
           <span style="position:absolute;top:10px;left:10px;padding:4px 10px;border-radius:999px;background:#C8F03C;color:#13140F;font:700 11px 'JetBrains Mono',monospace;">31</span>
         </div>
-        <div style="display:flex;flex-direction:column;gap:8px;padding:16px;">
+        <div class="artist-copy">
           <h3 style="margin:0;font-size:20px;font-weight:800;letter-spacing:-0.03em;">Grupo Niche</h3>
           <p style="margin:0;font:400 12px/1.4 'JetBrains Mono',monospace;color:#A9AB9F;">Colombia · Salsa</p>
           <p style="margin:0;font-size:14px;line-height:1.45;color:#D1D3C8;">Una de las orquestas de salsa más importantes, con "Cali Pachanguero" y "Gotas de Lluvia".</p>
@@ -627,7 +629,7 @@
           <img src="img/artistas/32-christian-nodal.webp" alt="Christian Nodal" loading="lazy" style="width:100%;height:100%;object-fit:cover;transition:transform .3s;" onmouseover="this.style.transform='scale(1.05)'" onmouseout="this.style.transform='scale(1)'">
           <span style="position:absolute;top:10px;left:10px;padding:4px 10px;border-radius:999px;background:#C8F03C;color:#13140F;font:700 11px 'JetBrains Mono',monospace;">32</span>
         </div>
-        <div style="display:flex;flex-direction:column;gap:8px;padding:16px;">
+        <div class="artist-copy">
           <h3 style="margin:0;font-size:20px;font-weight:800;letter-spacing:-0.03em;">Christian Nodal</h3>
           <p style="margin:0;font:400 12px/1.4 'JetBrains Mono',monospace;color:#A9AB9F;">México · Mariachi / Regional</p>
           <p style="margin:0;font-size:14px;line-height:1.45;color:#D1D3C8;">Revolucionó el regional mexicano con "Adiós Amor" y "Botella Tras Botella".</p>
@@ -641,7 +643,7 @@
           <img src="img/artistas/33-los-autenticos-decadentes.webp" alt="Los Auténticos Decadentes" loading="lazy" style="width:100%;height:100%;object-fit:cover;transition:transform .3s;" onmouseover="this.style.transform='scale(1.05)'" onmouseout="this.style.transform='scale(1)'">
           <span style="position:absolute;top:10px;left:10px;padding:4px 10px;border-radius:999px;background:#C8F03C;color:#13140F;font:700 11px 'JetBrains Mono',monospace;">33</span>
         </div>
-        <div style="display:flex;flex-direction:column;gap:8px;padding:16px;">
+        <div class="artist-copy">
           <h3 style="margin:0;font-size:20px;font-weight:800;letter-spacing:-0.03em;">Los Auténticos Decadentes</h3>
           <p style="margin:0;font:400 12px/1.4 'JetBrains Mono',monospace;color:#A9AB9F;">Argentina · Ska / Rock</p>
           <p style="margin:0;font-size:14px;line-height:1.45;color:#D1D3C8;">"Amor" con Mon Laferte superó los 100 millones de vistas; clásicos de fiesta latina [citation:6].</p>
@@ -655,7 +657,7 @@
           <img src="img/artistas/34-stefan-kramer.webp" alt="Stefan Kramer" loading="lazy" style="width:100%;height:100%;object-fit:cover;transition:transform .3s;" onmouseover="this.style.transform='scale(1.05)'" onmouseout="this.style.transform='scale(1)'">
           <span style="position:absolute;top:10px;left:10px;padding:4px 10px;border-radius:999px;background:#C8F03C;color:#13140F;font:700 11px 'JetBrains Mono',monospace;">34</span>
         </div>
-        <div style="display:flex;flex-direction:column;gap:8px;padding:16px;">
+        <div class="artist-copy">
           <h3 style="margin:0;font-size:20px;font-weight:800;letter-spacing:-0.03em;">Stefan Kramer</h3>
           <p style="margin:0;font:400 12px/1.4 'JetBrains Mono',monospace;color:#A9AB9F;">Chile · Humor / Imitación</p>
           <p style="margin:0;font-size:14px;line-height:1.45;color:#D1D3C8;">El imitador más famoso de Chile, con rutinas en Viña del Mar y televisión.</p>
@@ -669,7 +671,7 @@
           <img src="img/artistas/35-bombo-fica.webp" alt="Bombo Fica" loading="lazy" style="width:100%;height:100%;object-fit:cover;transition:transform .3s;" onmouseover="this.style.transform='scale(1.05)'" onmouseout="this.style.transform='scale(1)'">
           <span style="position:absolute;top:10px;left:10px;padding:4px 10px;border-radius:999px;background:#C8F03C;color:#13140F;font:700 11px 'JetBrains Mono',monospace;">35</span>
         </div>
-        <div style="display:flex;flex-direction:column;gap:8px;padding:16px;">
+        <div class="artist-copy">
           <h3 style="margin:0;font-size:20px;font-weight:800;letter-spacing:-0.03em;">Bombo Fica</h3>
           <p style="margin:0;font:400 12px/1.4 'JetBrains Mono',monospace;color:#A9AB9F;">Chile · Humor</p>
           <p style="margin:0;font-size:14px;line-height:1.45;color:#D1D3C8;">Comediante chileno con décadas de trayectoria y múltiples presentaciones en Viña.</p>
@@ -683,7 +685,7 @@
           <img src="img/artistas/36-the-austrian-bee-gees.webp" alt="The Austrian Bee Gees" loading="lazy" style="width:100%;height:100%;object-fit:cover;transition:transform .3s;" onmouseover="this.style.transform='scale(1.05)'" onmouseout="this.style.transform='scale(1)'">
           <span style="position:absolute;top:10px;left:10px;padding:4px 10px;border-radius:999px;background:#C8F03C;color:#13140F;font:700 11px 'JetBrains Mono',monospace;">36</span>
         </div>
-        <div style="display:flex;flex-direction:column;gap:8px;padding:16px;">
+        <div class="artist-copy">
           <h3 style="margin:0;font-size:20px;font-weight:800;letter-spacing:-0.03em;">The Austrian Bee Gees</h3>
           <p style="margin:0;font:400 12px/1.4 'JetBrains Mono',monospace;color:#A9AB9F;">Austria · Tributo</p>
           <p style="margin:0;font-size:14px;line-height:1.45;color:#D1D3C8;">Tributo a los Bee Gees con "Stayin' Alive" y "Night Fever"; giras por Europa desde 2007 [citation:8].</p>
@@ -697,7 +699,7 @@
           <img src="img/artistas/37-SantaFeria.webp" alt="SantaFeria" loading="lazy" style="width:100%;height:100%;object-fit:cover;transition:transform .3s;" onmouseover="this.style.transform='scale(1.05)'" onmouseout="this.style.transform='scale(1)'">
           <span style="position:absolute;top:10px;left:10px;padding:4px 10px;border-radius:999px;background:#C8F03C;color:#13140F;font:700 11px 'JetBrains Mono',monospace;">37</span>
         </div>
-        <div style="display:flex;flex-direction:column;gap:8px;padding:16px;">
+        <div class="artist-copy">
           <h3 style="margin:0;font-size:20px;font-weight:800;letter-spacing:-0.03em;">SantaFeria</h3>
           <p style="margin:0;font:400 12px/1.4 'JetBrains Mono',monospace;color:#A9AB9F;">Chile · Cumbia / Fiesta</p>
           <p style="margin:0;font-size:14px;line-height:1.45;color:#D1D3C8;">Banda chilena de cumbia festiva, conocida por "Me Gusta la Vida" y sus shows masivos.</p>
@@ -711,7 +713,7 @@
           <img src="img/artistas/38-myriam-hernandez.webp" alt="Myriam Hernández" loading="lazy" style="width:100%;height:100%;object-fit:cover;transition:transform .3s;" onmouseover="this.style.transform='scale(1.05)'" onmouseout="this.style.transform='scale(1)'">
           <span style="position:absolute;top:10px;left:10px;padding:4px 10px;border-radius:999px;background:#C8F03C;color:#13140F;font:700 11px 'JetBrains Mono',monospace;">38</span>
         </div>
-        <div style="display:flex;flex-direction:column;gap:8px;padding:16px;">
+        <div class="artist-copy">
           <h3 style="margin:0;font-size:20px;font-weight:800;letter-spacing:-0.03em;">Myriam Hernández</h3>
           <p style="margin:0;font:400 12px/1.4 'JetBrains Mono',monospace;color:#A9AB9F;">Chile · Balada</p>
           <p style="margin:0;font-size:14px;line-height:1.45;color:#D1D3C8;">La gran voz romántica de Chile, con "El Hombre que Yo Amo" y "Huele a Peligro".</p>
@@ -725,7 +727,7 @@
           <img src="img/artistas/39-il-divo.webp" alt="Il Divo" loading="lazy" style="width:100%;height:100%;object-fit:cover;transition:transform .3s;" onmouseover="this.style.transform='scale(1.05)'" onmouseout="this.style.transform='scale(1)'">
           <span style="position:absolute;top:10px;left:10px;padding:4px 10px;border-radius:999px;background:#C8F03C;color:#13140F;font:700 11px 'JetBrains Mono',monospace;">39</span>
         </div>
-        <div style="display:flex;flex-direction:column;gap:8px;padding:16px;">
+        <div class="artist-copy">
           <h3 style="margin:0;font-size:20px;font-weight:800;letter-spacing:-0.03em;">Il Divo</h3>
           <p style="margin:0;font:400 12px/1.4 'JetBrains Mono',monospace;color:#A9AB9F;">Internacional · Crossover clásico</p>
           <p style="margin:0;font-size:14px;line-height:1.45;color:#D1D3C8;">Cuarteto de crossover clásico; "Regresa a Mí" fue la primera canción en español en ser #1 en Reino Unido [citation:29].</p>

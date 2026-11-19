@@ -67,3 +67,10 @@ img{display:block}
 #showreel.sr-done #srSkip{background:#C8F03C;color:#13140F;border-color:#C8F03C}
 @media (max-width:720px){.sr-player{height:clamp(420px,calc(100svh - 180px),620px)}}
 @media (max-width:520px){.sr-ui button,.sr-ui a{height:32px;padding:0 12px;font-size:11px}}
+
+.showreel-link{align-self:flex-start;display:inline-flex;align-items:center;min-height:44px;padding:10px 16px;background:var(--ink);color:var(--bg);border-radius:999px;font-weight:700}
+.showreel-link:hover{color:var(--bg);text-decoration:underline}
+.artist-copy{display:flex;flex-direction:column;gap:8px;padding:16px}
+@supports (content-visibility:auto) and (contain-intrinsic-block-size:auto 130px){
+  .artist-copy{content-visibility:auto;contain-intrinsic-block-size:auto 130px}
+}
