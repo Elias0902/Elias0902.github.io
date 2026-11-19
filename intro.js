@@ -30,7 +30,7 @@
   let W = 0, H = 0, DPR = 1, U = 1, PORT = false;
   function resize() {
     const r = sec.getBoundingClientRect();
-    DPR = Math.min(2, window.devicePixelRatio || 1);
+    DPR = Math.min(1.5, window.devicePixelRatio || 1);
     W = Math.max(1, r.width); H = Math.max(1, r.height);
     cv.width = buf.width = Math.round(W * DPR);
     cv.height = buf.height = Math.round(H * DPR);
@@ -702,6 +702,8 @@
   const render = () => frame(t);
   function tick(now) {
     raf = 0; if (!playing) return;
+    // 30 fps: mitiga el trabajo de main-thread en pantallas de alta tasa de refresco
+    if (now - last < 1000 / 30) { raf = requestAnimationFrame(tick); return; }
     t += Math.min(.05, (now - last) / 1000); last = now;
     if (t >= DUR) { t = DUR; playing = false; done = true; ended(); }
     render();
