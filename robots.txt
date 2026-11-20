@@ -2,3 +2,4 @@ User-agent: *
 Allow: /
 
 Sitemap: https://elias0902.github.io/sitemap.xml
+Sitemap: https://elias0902.github.io/sitemap.txt
